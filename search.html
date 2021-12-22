@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工资查询系统</title>
+    <link rel="stylesheet" href="./search.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./fa.ico" />
+    <script src="./search.js"></script>
+</head>
+<body>
+    <div id="title">工资查询系统</div>
+    <table id="showInfo" class="showInfo">
+        <thead>
+            <tr>
+                <th>工号</th>
+                <th>人员</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>部门</th>
+                <th>职称</th>
+                <th>底薪</th>
+                <th>考勤</th>
+                <th>提成</th>
+                <th>工资总计</th>
+                <th>税后所得</th>
+                <th style="text-align:center;">操作</th>
+            </tr>
+        </thead>
+        <?php foreach($info as $k =>$k_arrayValue): ?>
+        <tr>
+            <td id="id"><?php echo $k_arrayValue['jobnumber'];?></td>
+            <td><?php echo $k_arrayValue['name'];?></td>
+            <td><?php echo $k_arrayValue['sex'];?></td>
+            <td><?php echo $k_arrayValue['age'];?></td>
+            <td><?php echo $k_arrayValue['class'];?></td>
+            <td><?php echo $k_arrayValue['zhicheng'];?></td>
+            <td><?php echo $k_arrayValue['money'];?></td>
+            <td><?php echo $k_arrayValue['time'];?></td>
+            <td><?php echo $k_arrayValue['workimpro'];?></td>
+            <td><?php echo $k_arrayValue['time']*100+$k_arrayValue['money']+$k_arrayValue['workimpro'];?></td>
+            <td><?php echo ($k_arrayValue['time']*100+$k_arrayValue['money']+$k_arrayValue['workimpro'])*0.9;?></td>
+            <td>
+                <a href="./update.php?jobnumber=<?php echo $k_arrayValue['jobnumber'];?>">修改</a>&nbsp;|                
+                <a href="./del.php?jobnumber=<?php echo $k_arrayValue['jobnumber'];?>" id="delButton" onClick="return confirm('确定删除?');">删除</a>&nbsp;    
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    <div id="tool">
+        <a href="javascript:;">
+            <div id="search">查询</div>
+        </a>
+        <a href="./index.php">
+            <div id="back">返回</div>
+        </a>
+    </div>
+    <div id="result">查无此人</div>
+</body>
+</html>

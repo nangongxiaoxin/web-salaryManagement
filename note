@@ -1,0 +1,10 @@
+<!-- 创建人员表 -->
+create table number(jobnumber int,name char(20),age int,class char(20),zhicheng char(20),sex char(20),money int)charset utf8;
+insert into number values(1191,'小王',28,'策划','组长','男',3000);
+<!-- 考勤表 -->
+create table worktime(jobnumber int,name char(20),time int)charset utf8;
+insert into worktime values(1191,'小王',28);
+
+<!-- 业绩表 -->
+create table workimp(jobnumber int,name char(20),workimpro int)charset utf8;
+insert into workimp values(1191,'小王',3000);

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加工资信息</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./fa.ico" />
+    <link rel="stylesheet" href="./add.css">
+</head>
+<body>
+    <div id="title">添加工资信息</div>
+    <form action="./add.php" method="post">
+        <table id="showInfo" class="showInfo">
+            <thead>
+                <tr>
+                    <th>工号</th>
+                    <th>人员</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>部门</th>
+                    <th>职称</th>
+                    <th>底薪</th>
+                    <th>考勤</th>
+                    <th>提成</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    <input type="number" name="jobnumber">
+                </td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+                <td>
+                    <input type="text" name="sex">
+                </td>
+                <td>
+                    <input type="number" name="age">
+                </td>
+                <td>
+                    <input type="text" name="class">
+                </td>
+                <td>
+                    <input type="text" name="zhicheng">
+                </td>
+                <td>
+                    <input type="number" name="money">
+                </td>
+                <td>
+                    <input type="number" name="time">
+                </td>
+                <td>
+                    <input type="number" name="workimpro">
+                </td>
+            </tr>
+        </table>
+        <div id="tool">
+            <a href="./add.html"><button id="save">保存</button></a>
+            <a href="./index.php" id="back">返回</a>
+        </div>
+    </form>
+</body>
+</html>

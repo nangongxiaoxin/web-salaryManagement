@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改员工信息</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./fa.ico" />
+    <link rel="stylesheet" href="./update.css">
+</head>
+
+<body>
+    <div id="title">修改员工信息</div>
+    <?php foreach($info as $k =>$k_arrayValue): ?>
+    <?php $jobnumber=$k_arrayValue['jobnumber'];?>
+    <?php endforeach; ?>
+    <form action="./update_edit.php?jobnumber=<?php echo $jobnumber=$k_arrayValue['jobnumber'];?>" method="post">
+        <table id="showInfo" class="showInfo">
+            <thead>
+                <tr>
+                    <th>工号</th>
+                    <th>人员</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>部门</th>
+                    <th>职称</th>
+                    <th>底薪</th>
+                    <th>考勤</th>
+                    <th>提成</th>
+                </tr>
+            </thead>
+            <?php foreach($info as $k =>$k_arrayValue): ?>
+            <tr>
+                <td>
+                    <input type="number" name="jobnumber" disabled="disabled" value="<?php echo $k_arrayValue['jobnumber'];?>">
+                </td>
+                <td>
+                    <input type="text" name="name" value="<?php echo $k_arrayValue['name'];?>">
+                </td>
+                <td>
+                    <input type="text" name="sex" value="<?php echo $k_arrayValue['sex'];?>">
+                </td>
+                <td>
+                    <input type="number" name="age" value="<?php echo $k_arrayValue['age'];?>">
+                </td>
+                <td>
+                    <input type="text" name="class" value="<?php echo $k_arrayValue['class'];?>">
+                </td>
+                <td>
+                    <input type="text" name="zhicheng" value="<?php echo $k_arrayValue['zhicheng'];?>">
+                </td>
+                <td>
+                    <input type="number" name="money" value="<?php echo $k_arrayValue['money'];?>">
+                </td>
+                <td>
+                    <input type="number" name="time" value="<?php echo $k_arrayValue['time'];?>">
+                </td>
+                <td>
+                    <input type="number" name="workimpro" value="<?php echo $k_arrayValue['workimpro'];?>">
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <div id="tool">
+            <button id="save">保存</button>
+            <a href="./index.php" id="back">返回</a>
+        </div>
+    </form>
+</body>
+
+</html>

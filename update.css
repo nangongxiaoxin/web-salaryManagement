@@ -1,0 +1,60 @@
+#title{
+    width: 1000px;
+    height: 30px;
+    background-color: rgb(206, 173, 236);
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 16px;
+    color: rgb(63, 88, 92);
+    font-weight: bold;
+}
+
+.showInfo{
+    position: relative;
+    top: 130px;
+    margin: 0 auto;
+}
+.showInfo tr td input{
+    text-align: center;
+    width: 150px;
+    height: 30px;
+}
+
+#save{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: none;
+    position: absolute;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-radius: 25px;
+    color: #8E6B23;
+    font-weight: bold;
+}
+#back{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    text-decoration: none;
+    left: 110px;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    border-radius: 25px;
+    color: #364f6b;
+    font-weight: bold;
+}
+#tool{
+    width: 210px;
+    height: 100px;
+    position: fixed;
+    line-height: 100px;
+    text-align: center;
+    flex-wrap: nowrap;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
